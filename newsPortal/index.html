@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <h2 class="heading" onclick="reload()">Online News Portal</h2>
+            <div class="nav-links">
+                <ul>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    <li class="hover-link nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+                    <li class="hover-link nav-item" id="weather" onclick="onNavItemClick('weather')">Weather</li>
+                    <li class="hover-link nav-item" id="business" onclick="onNavItemClick('business')">Business</li>
+                </ul>
+            </div>
+            <div class="search-bar">
+                <input type="text" class="news-input" id="search-text" placeholder="               Searche News">
+                <button class="search-btn" id="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="cards-container" id="cards-container">
+
+            </div>
+        </div>
+    </main>
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget </h6>
+                <p class="news-desc" id="news-desc">This is news description</p>
+            </div>
+        </div>
+
+    </template>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
